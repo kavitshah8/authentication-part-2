@@ -35,7 +35,7 @@ App.AuthenticatedRoute = Ember.Route.extend({
     return $.getJSON(url, { token: token });
   },
 
-  events: {
+  actions: {
     error: function(reason, transition) {
       if (reason.status === 401) {
         this.redirectToLogin(transition);
