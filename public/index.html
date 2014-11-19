@@ -15,9 +15,9 @@
         <div class="navbar-inner">
           <a class="brand" href="#">Ember Digest</a>
           <ul class="nav pull-right">
-            <li>{{#linkTo articles}}Articles{{/linkTo}}</li>
-            <li>{{#linkTo photos}}Photos{{/linkTo}}</li>
-            <li>{{#linkTo login}}Login{{/linkTo}}</li>
+            <li>{{#linkTo 'articles'}}Articles{{/linkTo}}</li>
+            <li>{{#linkTo 'photos'}}Photos{{/linkTo}}</li>
+            <li>{{#linkTo 'login'}}Login{{/linkTo}}</li>
           </ul>
         </div>
       </div>
@@ -63,7 +63,7 @@
     {{#if loggedIn}}
       <p>You are already logged in!</p>
     {{else}}
-      <form class="form-inline" {{action login on="submit"}}>
+      <form class="form-inline" {{action 'login' on="submit"}}>
         <h2>Log In</h2>
         {{input value=username type="text" placeholder="Username"}}
         {{input value=password type="password" placeholder="Password"}}
